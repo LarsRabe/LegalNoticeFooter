@@ -1,2 +1,2 @@
 # LegalNoticeFooter
-Footer with a legal notice
+Footer with a legal notice in German, Dutch and English
