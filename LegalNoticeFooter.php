@@ -27,14 +27,7 @@ class LegalNoticeFooter extends AbstractModule implements ModuleCustomInterface,
      */
     public function title(): string
     {
-        switch (I18N::languageTag()) {
-            case 'de':
-                return 'Impressum';
-                break;
-            default:
-                return 'Legal Notice';
-                break;
-        }
+        return I18N::translate('Legal Notice');
     }
 
  /**
@@ -73,6 +66,29 @@ class LegalNoticeFooter extends AbstractModule implements ModuleCustomInterface,
         return 'https://github.com/LarsRabe/LegalNoticeFooter';
     }
 
+
+    /**
+     * Additional translations.
+     *
+     * @param string $language
+     *
+     * @return array<string>
+     */
+    public function customTranslations(string $language): array
+    {
+        switch ($language) {
+            case 'de':
+                return [
+                    'Legal Notice'  => 'Impressum',
+                ];
+            case 'nl':
+                return [
+                    'Legal Notice'  => 'Juridische Kennisgeving',
+                ];
+            default:
+                return [];
+        }
+    }
 
     /**
      * Bootstrap the module
@@ -126,6 +142,9 @@ class LegalNoticeFooter extends AbstractModule implements ModuleCustomInterface,
         switch (I18N::languageTag()) {
             case 'de':
                 $page = '::page-de';
+                break;
+            case 'nl':
+                $page = '::page-nl';
                 break;
             default:
                 $page = '::page';
