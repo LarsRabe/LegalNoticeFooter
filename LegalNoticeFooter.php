@@ -45,7 +45,7 @@ class LegalNoticeFooter extends AbstractModule implements ModuleCustomInterface,
      */
     public function customModuleVersion(): string
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     /**
