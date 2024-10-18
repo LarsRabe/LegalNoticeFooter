@@ -54,7 +54,7 @@ class LegalNoticeFooter extends AbstractModule implements ModuleCustomInterface,
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return 'https://github.com/LarsRabe/LegalNoticeFooter/latest-version.txt';
+        return 'https://github.com/LarsRabe/LegalNoticeFooter/raw/main/latest-version.txt';
     }
 
     /**
